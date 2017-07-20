@@ -1,0 +1,28 @@
+nav {
+    text-align: center;
+}
+a {
+    margin-left: .25rem;
+    margin-right: .25rem;
+}
+textarea {
+    width: 100%;
+}
+code {
+    display: inline-block;
+    width: 100%;
+}
+hr {
+    margin-left: 0;
+    margin-right: 0;
+}
+[contenteditable=true] {
+  min-width: 2rem;
+}
+pre, code {
+    white-space: pre-wrap;
+}
+header, main, footer {
+    margin-left: 2rem;
+    margin-right: 2rem;
+}

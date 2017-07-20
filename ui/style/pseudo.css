@@ -1,0 +1,19 @@
+[contenteditable=true] {
+    position: relative;
+}
+[contenteditable=true]:before {
+    position: absolute;
+    content: "";
+    display: block;
+    top: 0;
+    left: 0;    
+    right: 0;
+    bottom: 0;
+    border-color: var(--color-fg);
+    border-width: 1px 0 1px 0;
+    border-style: dashed;
+    opacity: 0.5;
+}
+[contenteditable=true]:empty:before {
+    content: attr(data-placeholder);
+}

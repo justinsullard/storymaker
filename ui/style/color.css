@@ -1,0 +1,37 @@
+/*:root {
+    --color-bg: rgba(255,209,170,1);
+    --color-fg: rgba(85,39,0,1);
+    --color-action: rgba(170,108,57,1);
+    --color-delete: rgba(255, 128, 128, 0.5);
+    --color-insert: rgba(128, 255, 128, 0.5);
+}*/
+:root {
+    --color-bg: rgba(225,225,225,1);
+    --color-fg: rgba(31,31,0,1);
+    --color-action: rgba(63,63,225,1);
+    --color-delete: rgba(255, 128, 128, 0.5);
+    --color-insert: rgba(128, 255, 128, 0.5);
+}
+body {
+    background-color: var(--color-bg);
+    color: var(--color-fg);
+}
+a, a:visited, a:active, a:hover {
+    color: var(--color-action);
+}
+hr {
+    border-color: var(--color-fg);
+    background-color: var(--color-fg);
+    color: var(--color-fg);
+}
+ins {
+    background-color: var(--color-insert);
+}
+del {
+    background-color: var(--color-delete);
+}
+[contenteditable=true] {
+    outline: none;
+    border: none;
+    color: var(--color-action);
+}

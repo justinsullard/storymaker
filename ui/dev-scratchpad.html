@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Click tests</title>
+    <link href="https://fonts.googleapis.com/css?family=Lemonada|Cutive+Mono|Lato|Lora|Passion+One:700" rel="stylesheet">
+    <!-- <link href="https://fonts.googleapis.com/css?family=Coming+Soon|Cutive+Mono|Lato|Lora|Passion+One:700" rel="stylesheet"> -->
+    <style>
+        /*Variables and globals*/
+        :root {
+            --color-bg: rgba(225,225,225,1);
+            --color-fg: rgba(31,31,0,1);
+            --color-action: rgba(63,63,225,1);
+            --color-delete: rgba(255, 128, 128, 0.5);
+            --color-insert: rgba(128, 255, 128, 0.5);
+        }
+        /*Layout elements*/
+        body {
+            align-items: stretch;
+            background-color: var(--color-bg);
+            color: var(--color-fg);
+            display: flex;
+            flex-direction: column;
+            font-family: 'Lato', sans-serif;
+            font-weight: normal;
+            font-size: 18px;
+            height: 100vh;
+            line-height: 24px;
+            margin: auto;
+            padding: 0;
+        }
+        @media only screen and (min-device-width: 768px) { 
+            body { max-width: 768px; }
+        }
+        @media only screen and (min-device-width: 1024px) { 
+            body { max-width: 1024px; }
+        }
+        nav {
+            flex-direction: row;
+            justify-content: center;
+        }
+        main {
+            flex: 1;
+            flex-direction: column;
+            overflow-y: auto;
+        }
+        aside {
+            flex-direction: row;
+            justify-content: center;
+        }
+        footer {
+            flex-direction: row;
+            position: relative;
+        }
+        nav, main, aside, footer {
+            display: flex;
+        }
+        /*Block elements*/
+        h1 {
+            font-size: 43px;
+            line-height: 58px;
+            margin-top: 0;
+            margin-bottom: 0;
+            font-weight: bold;
+            font-style: italic;
+        }
+        h2 {
+            font-size: 32px;
+            line-height: 58px;
+            margin-top: 0;
+            margin-bottom: 29px;
+            font-weight: bold;
+            font-style: italic;
+        }
+        h1, h2 {
+            font-family: 'Passion One', sans-serif;
+        }
+        blockquote {
+            display: flex;
+            flex-direction: column;
+        }
+        q {
+            font-family: 'Lora', serif;
+            font-style: italic;
+        }
+        cite {
+            align-self: flex-end;
+        }
+        pre {
+            font-family: 'Cutive Mono', monospace;
+            white-space: pre-wrap;
+        }
+        textarea {
+            flex: 1;
+            border: none;
+            resize: none;
+            padding: 0 1rem;
+            /*outline: none;*/
+            border: none;
+            color: var(--color-action);
+            background: none;
+            font-family: 'Lemonada', cursive;
+            /*font-family: 'Coming Soon', cursive;*/
+            font-size: 24px;
+            line-height: 29px;
+            height: 29px;
+            margin: 0;
+        }
+        p, pre, blockquote {
+          margin-top: 0px;
+          margin-bottom: 29px;
+        }
+        hr {
+            border: 1px solid;
+            margin: -1px 0;
+            border-color: var(--color-action);
+            background-color: var(--color-action);
+            color: var(--color-action);
+            opacity: 0.618;
+        }
+        /*Inline elements*/
+        a {
+            margin-left: .25rem;
+            margin-right: .25rem;
+            font-weight: bolder;
+            text-decoration: underline;
+            font-family: 'Lemonada', cursive;
+            /*font-family: 'Coming Soon', cursive;*/
+        }
+        a, a:visited, a:active, a:hover {
+            color: var(--color-action);
+        }
+        ins {
+            background-color: var(--color-insert);
+        }
+        del {
+            background-color: var(--color-delete);
+        }
+        /*Pseudo and generic*/
+        footer:before {
+            position: absolute;
+            content: "";
+            display: block;
+            top: 0;
+            left: 0;    
+            right: 0;
+            bottom: 0;
+            border-color: var(--color-action);
+            border-width: 1px 0 1px 0;
+            border-style: dashed;
+            opacity: 0.5;
+            pointer-events: none;
+        }
+        [disabled] {
+            pointer-events: none;
+            opacity: .618;
+        }
+    </style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</head>
+<body>
+    <header><h1>Internal Drama</h1></header>
+    <nav>
+        <a tabindex="3" href="/">Home</a>
+        <a tabindex="3" href="/story">Stories</a>
+        <a tabindex="3" href="/character">Characters</a>
+    </nav>
+    <main>
+        <h2>Chapter Name</h2>
+        <p>This is a p tag. It will be used for narration.</p>
+        <pre>This is a pre tag. It will be used for containing notes.</pre>
+        <blockquote>
+            <q>This is a blockquote tag. It will be used for containing dialog.</q>
+            <cite>Character Name</cite>
+        </blockquote>
+        <hr/>
+        <div>This is a div tag with a <del>del</del> tag and <ins>ins</ins> tag inside</div>
+        <section>
+            <p>This is a script. Here the author will provide instructions for characters.</p>
+            <pre>Leaves notes for your character that only they will see.</pre>
+            <blockquote>
+                <q>Put words in your characters mouth.</q>
+            </blockquote>
+        </section>
+    </main>
+    <footer><textarea tabindex="1" autofocus placeholder="Type a command here (try 'help' if you need it). Or use one of the command links above ^."></textarea></footer>
+    <aside>
+        <a tabindex="2" href="?read">read</a>
+        <a tabindex="2" href="?write">write</a>
+        <span>|</span>
+        <a tabindex="2" href="?why">why</a>
+        <a tabindex="2" href="?who">who</a>
+        <a tabindex="2" href="?where">where</a>
+        <a tabindex="2" href="?when">when</a>
+        <a tabindex="2" href="?what">what</a>
+        <a tabindex="2" href="?how">how</a>
+        <span>|</span>
+        <a tabindex="2" href="?say">say</a>
+        <a tabindex="2" href="?note">note</a>
+        <a tabindex="2" href="?edit">edit</a>
+        <span>|</span>
+        <a tabindex="2" href="?search">search</a>
+        <a tabindex="2" href="?help" disabled>help</a>
+        <a tabindex="2" href="?hello">hello</a>
+        <a tabindex="2" href="?goodbye">goodbye</a>
+    </aside>
+
+
+
+
+
+
+
+
+
+
+
+<script id="script-links">(() => {
+    const links = (e) => {
+        const t = e.target;
+        if (`${t.tagName}`.toLowerCase() === 'a') {
+            e.preventDefault();
+            document.querySelector('main').innerHTML = `Content for link ${t.getAttribute('href')}`;
+        }
+    };
+    document.addEventListener('click', links);
+})();</script>
+<script id="script-textarea">(() => {
+    const MIN = 29;
+    const MAX = 29 * 5;
+    const DEBOUNCE = 25;
+    const ESC = (e) => {
+        if (e.key !== 'Escape') { return; }
+        e.preventDefault();
+        e.target.value = '';
+    };
+    const ENTER = (e) => {
+        if (e.key !== 'Enter') { return; }
+        e.preventDefault();
+        const detail = e.target.value;
+        if (!detail) { return; }
+        const ev = new CustomEvent('command', { detail });
+        e.target.value = '';
+        window.dispatchEvent(ev);
+    };
+    let last = 0;
+    const handler = (e) => {
+        const debounce = Date.now() - last;
+        if (debounce < DEBOUNCE) { return; }
+        last = Date.now();
+        ESC(e);
+        ENTER(e);
+        // Reset size to handle shrinking when text is deleted
+        e.target.style.height = `${MIN}px`;
+        if (e.target.value === '') { return; }
+        const h = Math.min(MAX, Math.max(MIN, e.target.scrollHeight));
+        if (h !== MIN) { e.target.style.height = `${h}px`; }
+    };
+    ['change', 'paste', 'cut', 'keypress', 'keyup'].map((e) => document.querySelector('textarea').addEventListener(e, handler));
+})();</script>
+<script id="story-command">(() => {
+    const commander = (e) => {
+        const { type, detail } = e;
+        console.log('commander', type, detail);
+    };
+    window.addEventListener('command', commander);
+})();</script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+* {
+  font-family: 'Lato', sans-serif;
+  font-weight: normal;
+}
+h1, h2, h3, h4, h5 {
+  font-weight: bold;
+  font-style: italic;
+}
+pre {
+  /*font-family: 'Indie Flower', cursive;*/
+  font-family: 'Cutive Mono', monospace;
+}
+blockquote {
+  font-family: 'Oleo script', cursive;
+  font-style: italic;
+}
+a {
+  font-weight: bolder;
+  text-decoration: underline;
+}
+[contenteditable=true] {
+  font-family: 'Indie Flower', cursive;
+}

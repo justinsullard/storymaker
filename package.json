@@ -1,0 +1,23 @@
+{
+  "name": "storymaster",
+  "version": "1.0.0",
+  "description": "storymaker",
+  "main": "electron/main.js",
+  "scripts": {
+    "dev": "electron .",
+    "test": "node test/main.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/justinsullard/storymaker.git"
+  },
+  "author": "Justin Sullard",
+  "license": "Unlicense",
+  "bugs": {
+    "url": "https://github.com/justinsullard/storymaker/issues"
+  },
+  "homepage": "https://github.com/justinsullard/storymaker#readme",
+  "devDependencies": {
+    "electron": "^1.6.11"
+  }
+}

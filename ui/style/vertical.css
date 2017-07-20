@@ -1,0 +1,101 @@
+html {
+    font-size: 21px;
+  line-height: 1.3rem;
+}
+body {
+  font-size: 1rem;
+  line-height: 1.3125rem;
+  margin: auto;
+}
+h1 {
+  font-size: 2.8125rem;
+  line-height: 3.9375rem;
+  margin-top: 1.3125rem;
+  margin-bottom: 2.625rem;
+}
+h2 {
+  font-size: 2rem;
+  line-height: 2.625rem;
+  margin-top: 1.3125rem;
+  margin-bottom: 1.3125rem;
+}
+h3 {
+  font-size: 1.4375rem;
+  line-height: 2.625rem;
+  margin-top: 1.3125rem;
+  margin-bottom: 0rem;
+}
+h4 {
+  font-size: 1rem;
+  line-height: 1.3125rem;
+  margin-top: 1.3125rem;
+  margin-bottom: 0rem;
+}
+h5 {
+  font-size: 1rem;
+  line-height: 1.3125rem;
+  margin-top: 1.3125rem;
+  margin-bottom: 0rem;
+}
+p, ul, ol, pre, table, blockquote {
+  margin-top: 0rem;
+  margin-bottom: 1.3125rem;
+}
+ul ul, ol ol, ul ol, ol ul {
+  margin-top: 0rem;
+  margin-bottom: 0rem;
+}
+
+/* Let's make sure all's aligned */
+hr {
+  border: 1px solid;
+  margin-top: -1px;
+  margin-bottom: -1px;
+  /*margin-bottom: 1.3125rem;*/
+}
+a, b, i, strong, em, small, code {
+  line-height: 0;
+}
+sub, sup {
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+sup {
+  top: -0.5em;
+}
+sub {
+  bottom: -0.25em;
+}
+input, textarea {
+  font-size: inherit;
+  border-top: none;
+  border-bottom: none;
+  margin-top: inherit;
+  margin-bottom: inherit;
+  padding-top: inherit;
+  padding-bottom: inherit;
+}
+[contenteditable=true] {
+  min-height: 1.3125rem;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+main {
+  display: flex;
+  flex-direction: column;
+  /*justify-content: flex-end;*/
+  overflow-y: auto;
+  flex: 1;
+}
+header {
+}
+footer {
+  display: flex;
+  flex-direction: column-reverse;
+  /*align-items: center;*/
+}
